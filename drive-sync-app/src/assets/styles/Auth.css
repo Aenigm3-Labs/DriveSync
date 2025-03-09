@@ -1,0 +1,115 @@
+/* Ensure the header is fixed at the top */
+.auth-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1A237E;
+  color: white;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.auth-header .logo a {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+/* Login / Signup toggle */
+.auth-toggle {
+  font-size: 16px;
+}
+
+.auth-toggle .toggle-button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.auth-toggle .toggle-button:hover {
+  text-decoration: underline;
+}
+
+/* Push content below the fixed header */
+.page-container {
+  padding-top: 80px; /* Adjusted to ensure content is fully visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Ensure Footer stays at the bottom */
+.auth-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+  color: rgb(83, 76, 76);
+  background-color: #f4f4f4;
+}
+
+/* Fullscreen Layout */
+.auth-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Centering the auth content */
+.auth-content {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Fullscreen Auth Form */
+.auth-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Input Fields */
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.auth-button {
+  background-color: #1A237E;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-button:hover {
+  background-color: #0D1B5E;
+}
