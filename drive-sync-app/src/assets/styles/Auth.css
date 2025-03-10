@@ -1,4 +1,26 @@
-/* Ensure the header is fixed at the top */
+/* ----------------------------------- */
+/*  GLOBAL STYLES                      */
+/* ----------------------------------- */
+
+/* Import Neurodivergent-Friendly Font */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+/* Global Readability Enhancements */
+html {
+  font-size: 18px;
+}
+
+body {
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  background-color: #f9f9f9;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+/* ----------------------------------- */
+/*  HEADER STYLES (AUTH HEADER)        */
+/* ----------------------------------- */
+
 .auth-header {
   position: fixed;
   top: 0;
@@ -13,7 +35,7 @@
   z-index: 1000;
 }
 
-/* Logo styling */
+/* Logo Styling */
 .auth-header .logo a {
   font-size: 22px;
   font-weight: bold;
@@ -21,7 +43,7 @@
   color: white;
 }
 
-/* Login / Signup toggle */
+/* Login / Signup Toggle */
 .auth-toggle {
   font-size: 16px;
 }
@@ -37,17 +59,10 @@
   text-decoration: underline;
 }
 
-/* Push content below the fixed header */
-.page-container {
-  padding-top: 80px; /* Adjusted to ensure content is fully visible */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
+/* ----------------------------------- */
+/*  FOOTER STYLES                      */
+/* ----------------------------------- */
 
-/* Ensure Footer stays at the bottom */
 .auth-footer {
   position: fixed;
   bottom: 0;
@@ -58,6 +73,20 @@
   padding: 10px 0;
   color: rgb(83, 76, 76);
   background-color: #f4f4f4;
+}
+
+/* ----------------------------------- */
+/*  LAYOUT & PAGE STRUCTURE            */
+/* ----------------------------------- */
+
+/* Push content below the fixed header */
+.page-container {
+  padding-top: 80px; /* Adjusted to ensure content is fully visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 /* Fullscreen Layout */
@@ -72,13 +101,11 @@
   padding: 20px;
 }
 
-/* Centering the auth content */
-.auth-content {
-  width: 100%;
-  max-width: 500px;
-}
+/* ----------------------------------- */
+/*  AUTHENTICATION PAGE STYLES         */
+/* ----------------------------------- */
 
-/* Fullscreen Auth Form */
+/* Authentication Container */
 .auth-container {
   width: 100%;
   max-width: 500px;
@@ -98,7 +125,7 @@
   border-radius: 5px;
 }
 
-/* Buttons */
+/* Authentication Buttons */
 .auth-button {
   background-color: #1A237E;
   color: white;
@@ -112,4 +139,165 @@
 
 .auth-button:hover {
   background-color: #0D1B5E;
+}
+
+/* ----------------------------------- */
+/*  LANDING PAGE STYLES                */
+/* ----------------------------------- */
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hero Section */
+.landing-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.landing-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.landing-content p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.landing-content strong {
+  font-weight: 700;
+}
+
+/* ----------------------------------- */
+/*  CALL-TO-ACTION (CTA) BUTTON        */
+/* ----------------------------------- */
+
+.cta-button {
+  background: linear-gradient(90deg, #3a3aa2, #5d18a6);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #2b2b8f, #4b148f);
+}
+
+/* Small Note Below CTA */
+.free-note {
+  font-size: 16px;
+  color: #444;
+  margin-top: 5px;
+}
+/* ----------------------------------- */
+/*  REGISTER PAGE STYLES               */
+/* ----------------------------------- */
+
+/* Fullscreen Background */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #222, #111);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Centered Box */
+.register-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.register-box h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Sign-Up Buttons */
+.register-button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Apple Button */
+.register-button.apple {
+  background: white;
+  color: black;
+}
+
+/* Google Button */
+.register-button.google {
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Email Button */
+.register-button.email {
+  background: black;
+  color: white;
+}
+
+/* Hover Effects */
+.register-button:hover {
+  opacity: 0.85;
+}
+
+/* Login Link */
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Footer (Award Section) */
+.register-footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #bbb;
+}
+
+.register-footer span {
+  font-weight: bold;
 }

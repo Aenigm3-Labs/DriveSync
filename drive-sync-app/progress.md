@@ -9,12 +9,14 @@
     5. componenets/ auth componants/ auth layout & landing  pages done
 
 
+## 🚀 In Progress
+    1. auth pages (login/sign up/forget pw ) - create css for auth pages instead of 1 for landing page
 
-
-    /* ⏭ Next Step */
+    
+## 🔴 Next Steps
       
 * Create folder structure
-    1. auth pages (login/sign up/forget pw ) - create css for auth pages instead of 1 for landing page
+    1. 
     2. navbar/sidebar + css
 
 

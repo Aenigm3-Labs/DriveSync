@@ -1,5 +1,6 @@
 import React from "react";
-import "../assets/styles/Auth.css";
+import { Link } from "react-router-dom";
+import "../../assets/styles/Auth.css";
 
 const Login = () => {
   return (
@@ -10,6 +11,11 @@ const Login = () => {
         <input type="password" placeholder="Password" required />
         <button type="submit" className="auth-button">Login</button>
       </form>
+
+      {/* Forgot Password Link */}
+      <p className="forgot-password">
+        <Link to="/forgot-password">Forgot Password?</Link>
+      </p>
     </div>
   );
 };
