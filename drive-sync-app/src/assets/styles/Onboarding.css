@@ -1,184 +1,205 @@
 /* ----------------------------------- */
+/* Onboarding Header                   */
+/* ----------------------------------- */
+
+.onboardingheader {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #202a99; /* ✅ Blue background */
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* ✅ Logo & Company Name */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(158, 120, 120);
+}
+
+/* ----------------------------------- */
 /*  ONBOARDING PAGE STYLES             */
 /* ----------------------------------- */
 
 /* Centered Container */
 .onboarding-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 200vh;
-    background-color: #ffffff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Heading Styles */
-  .onboarding-container h2 {
-    font-size: 22px;
-    font-weight: 600;
-  }
-  
-  .onboarding-container h3 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  /* Options Container */
-  .options {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  
-  /* Option Buttons */
-  .option-button {
-    padding: 12px 24px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    background: #f9f9f9;
-    color: #333;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .option-button.selected {
-    background: #5d18a6;
-    color: white;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Progress Bar */
-  .progress-bar {
-    width: 100%;
-    height: 4px;
-    background: #d0cfcf;
-    margin-bottom: 20px;
-    border-radius: 2px;
-  }
-  
-  .progress {
-    width: 33%; /* Example: Adjust for progress */
-    height: 100%;
-    background: #5d18a6;
-    border-radius: 2px;
-  }
-  
-  /* Next Button */
-  .next-button {
-    background: #5d18a6;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .next-button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-  }
-  /* ----------------------------------- */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 500%;
+  max-width: 800px; /* ✅ Prevents stretching */
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin: auto; /* ✅ Ensures proper centering */
+}
+
+/* Heading Styles */
+.onboarding-container h2 {
+font-size: 32px;
+font-weight: 600;
+}
+
+.onboarding-container h3 {
+font-size: 26px;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+/* Options Container */
+.options {
+display: flex;
+flex-wrap: wrap; /* ✅ Prevents overflow */
+gap: 15px;
+justify-content: center; /* ✅ Ensures even alignment */
+margin-bottom: 30px;
+}
+
+/* Option Buttons */
+.option-button {
+padding: 12px 24px;
+font-size: 16px;
+border: 1px solid #ccc;
+background: #f9f9f9;
+color: #333;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.option-button.selected {
+background: #5d18a6;
+color: white;
+border: none;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ----------------------------------- */
 /* Tools Selection Grid */
 /* ----------------------------------- */
 
 .tools-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 20px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+margin-bottom: 20px;
 }
 
 .tool-button {
-  background-color: #f3f3f3;
-  color: #333;
-  padding: 12px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease;
+background-color: #f3f3f3;
+color: #333;
+padding: 12px 20px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+transition: all 0.3s ease;
 }
 
 .tool-button.selected {
-  background-color: #6b4eff;
-  color: white;
+background-color: #6b4eff;
+color: white;
 }
 
 .tool-button:hover {
-  background-color: #5a3edd;
+background-color: #5a3edd;
 }
 
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  max-width: 500px; /* ✅ Prevents stretching */
+  height: 4px;
+  background: #fdfdfd;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  }
+  
+  .progress {
+  width: 20%; /* Example: Adjust for progress */
+  height: 100%;
+  background: #eb34fc;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out; /* ✅ Smooth transition */
+  }
 /* ----------------------------------- */
 /* Back and Next Buttons */
 /* ----------------------------------- */
 
-/* Back and Next Buttons */
+/* Button Group */
 .button-group {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 500px;
-  margin-top: 20px;
+display: flex;
+justify-content: space-between;
+width: 700%;
+max-width: 800px; /* ✅ Matches the content width */
+margin-top: 20px;
+gap: 1px;
 }
 
 /* Back Button */
 .back-button {
-  background-color: #e0e0e0;
-  color: #333;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.3s ease;
+background-color: #e0e0e0;
+color: #333;
+padding: 12px 24px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+font-weight: bold;
+transition: all 0.3s ease;
 }
 
 .back-button:hover {
-  background-color: #d6d6d6;
+background-color: #d6d6d6;
 }
 
 /* Next Button */
 .next-button {
-  background: #5d18a6;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+background: #5d18a6;
+color: white;
+font-size: 16px;
+padding: 12px 24px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
 }
 
 .next-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+background: #ccc;
+cursor: not-allowed;
+}
+
+/* Finish Button */
+.finish-button {
+background: #2c2b2d;
+color: white;
+font-size: 16px;
+padding: 12px 24px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.finish-button:hover {
+background: #1f1f1f;
 }
 
 /* Info Text */
 .info-text {
-  font-size: 14px;
-  color: #666;
-  text-align: center;
-  margin-top: 10px;
-}
-/* Next Button */
-.finish-button {
-  background: #2c2b2d;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+font-size: 14px;
+color: #666;
+text-align: center;
+margin-top: 10px;
 }

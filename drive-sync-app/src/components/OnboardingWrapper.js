@@ -5,6 +5,7 @@ import BusinessSizeSelection from "../pages/onboard/BusinessSizeSelection";
 import ManageSelection from "../pages/onboard/ManageSelection";
 import ToolSelection from "../pages/onboard/ToolSelection";
 import WorkspaceSetup from "../pages/onboard/WorkspaceSetup"; 
+import OnboardingLayout from "../layout/OnboardingLayout"; // ✅ Import Layout
 
 const OnboardingWrapper = () => {
   const navigate = useNavigate();
@@ -30,7 +31,9 @@ const OnboardingWrapper = () => {
 
   const handleNext = (selectedOption) => {
     console.log("User selected:", selectedOption);
-    navigate(nextRoute);
+    if (nextRoute) {
+      navigate(nextRoute);
+    }
   };
 
   const handleBack = () => {
@@ -39,7 +42,11 @@ const OnboardingWrapper = () => {
     }
   };
 
-  return <Component onNext={handleNext} onBack={handleBack} />;
+  return (
+    <OnboardingLayout>  {/* ✅ Wrapping with Layout (Header & Footer) */}
+      <Component onNext={handleNext} onBack={handleBack} />
+    </OnboardingLayout>
+  );
 };
 
 export default OnboardingWrapper;

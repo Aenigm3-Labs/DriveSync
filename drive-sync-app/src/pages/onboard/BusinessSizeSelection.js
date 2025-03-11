@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "../../assets/styles/Onboarding.css";
+import "../../assets/styles/Onboarding.css"; // ✅ Same CSS for all pages
 
 const BusinessSizeSelection = ({ onNext, onBack }) => {
   const [selectedSize, setSelectedSize] = useState(null);
 
-  // Business size options
   const businessSizes = [
     "Solo entrepreneur",
     "Small business (2-10 employees)",
@@ -13,11 +12,11 @@ const BusinessSizeSelection = ({ onNext, onBack }) => {
   ];
 
   return (
-    <div className="onboarding-container">
+    <div className="onboarding-container"> {/* ✅ Standardized class name */}
       <h2>Select your</h2>
       <h3>Business Size</h3>
 
-      {/* Business Size Selection Buttons */}
+      {/* Options */}
       <div className="options">
         {businessSizes.map((size) => (
           <button
@@ -32,20 +31,15 @@ const BusinessSizeSelection = ({ onNext, onBack }) => {
 
       {/* Progress Bar */}
       <div className="progress-bar">
-        <div className="progress" style={{ width: "50%" }}></div> {/* Adjust progress as needed */}
+        <div className="progress" style={{ width: "50%" }}></div> {/* ✅ Same progress style */}
       </div>
 
-      {/* Back and Next Buttons */}
+      {/* Navigation Buttons */}
       <div className="button-group">
         <button className="back-button" onClick={onBack}>
           ← Back
         </button>
-
-        <button
-          className="next-button"
-          onClick={() => onNext(selectedSize)}
-          disabled={!selectedSize}
-        >
+        <button className="next-button" onClick={() => onNext(selectedSize)} disabled={!selectedSize}>
           Next →
         </button>
       </div>

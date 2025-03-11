@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../assets/styles/Onboarding.css";
+import "../../assets/styles/Onboarding.css"; // ✅ Use common styles
 
 const ManageSelection = ({ onNext, onBack }) => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -22,11 +22,11 @@ const ManageSelection = ({ onNext, onBack }) => {
   ];
 
   return (
-    <div className="onboarding-container">
+    <div className="onboarding-container"> {/* ✅ Same container for all steps */}
       <h2>What would you like to manage?</h2>
 
-      {/* Selection Grid */}
-      <div className="options-grid">
+      {/* ✅ Standardized Options Grid */}
+      <div className="options">
         {options.map((option) => (
           <button
             key={option}
@@ -38,24 +38,18 @@ const ManageSelection = ({ onNext, onBack }) => {
         ))}
       </div>
 
-      
       <p className="info-text">Don’t worry, you can always add more in the future.</p>
 
-        {/* Progress Bar */}
+      {/* ✅ Standardized Progress Bar */}
       <div className="progress-bar">
-        <div className="progress" style={{ width: "75%" }}></div> {/* Adjust progress as needed */}
+        <div className="progress" style={{ width: "75%" }}></div> {/* ✅ Matches other pages */}
       </div>
 
-
-      {/* Back and Next Buttons */}
+      {/* ✅ Standardized Back & Next Buttons */}
       <div className="button-group">
-        <button 
-          className="back-button" 
-          onClick={onBack}
-        >
+        <button className="back-button" onClick={onBack}>
           ← Back
         </button>
-
         <button 
           className="next-button" 
           onClick={() => onNext(selectedOption)}
