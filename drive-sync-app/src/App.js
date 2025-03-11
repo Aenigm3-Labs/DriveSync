@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Layouts
 import AuthLayout from "./layout/AuthLayout";
+import DashboardLayout from "./layout/DashboardLayout";
 
 // Pages
 import LandingPage from "./pages/auth/LandingPage";
@@ -33,6 +34,9 @@ const App = () => {
         <Route path="/manage-selection" element={<OnboardingWrapper />} />
         <Route path="/tool-selection" element={<OnboardingWrapper />} />
         <Route path="/workspace-setup" element={<OnboardingWrapper />} />
+
+          {/* ✅ Dashboard Routes */}
+        <Route path="/*" element={<DashboardLayout />} />
 
       </Routes>
     </Router>

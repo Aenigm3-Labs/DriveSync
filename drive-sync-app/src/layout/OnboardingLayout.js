@@ -7,7 +7,7 @@ const OnboardingLayout = ({ children }) => {
       
       {/* ✅ HEADER */}
       <header className="onboardingheader">
-        <h1>DriveSync Onboarding</h1>
+        <h2>DriveSync Onboarding</h2>
       </header>
 
       {/* ✅ CONTENT (Where onboarding steps will be rendered) */}
