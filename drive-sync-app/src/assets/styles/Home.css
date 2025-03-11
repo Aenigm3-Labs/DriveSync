@@ -1,0 +1,51 @@
+/* ----------------------------------- */
+/* Home Page Styles                    */
+/* ----------------------------------- */
+
+.home-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  /* ✅ Dashboard Title */
+  .home-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* ✅ Stats Cards */
+  .dashboard-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .dashboard-card {
+    flex: 1;
+    background: #e3f2fd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* ✅ Stats Number */
+  .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1565c0;
+  }
+  
+  /* ✅ Welcome Message */
+  .home-message {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+  }
+  

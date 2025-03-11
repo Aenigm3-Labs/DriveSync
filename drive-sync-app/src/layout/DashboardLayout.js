@@ -7,6 +7,8 @@ import Documents from "../components/dashboard/Documents";
 import QuickAccess from "../components/dashboard/QuickAccess";
 import Settings from "../components/dashboard/Settings";
 import "../assets/styles/Dashboard.css"; 
+import "../assets/styles/Dashboard.css"; 
+
 
 const DashboardLayout = () => {
   return (
